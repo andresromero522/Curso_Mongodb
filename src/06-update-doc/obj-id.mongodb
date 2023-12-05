@@ -1,0 +1,9 @@
+use("db_first")
+
+db.products.updateOne(
+    {_id: ObjectId("656e170f04cea085b21e10be")}, 
+    {
+        $inc: {
+            price: 1000
+        }
+    })

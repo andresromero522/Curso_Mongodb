@@ -1,12 +1,12 @@
 use("db_first")
 
 db.products.insertOne({
-    _id: 1,
-    name: "Camisa",
-    price: 75000
+    _id: 6,
+    name: "Vestido",
+    price: 150000
 })
 db.products.insertOne({
-    _id: 2,
-    name: "Short",
-    price: 65000
+    _id: 5,
+    name: "Medias",
+    price: 48000
 })

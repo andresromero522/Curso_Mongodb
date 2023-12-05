@@ -1,0 +1,3 @@
+use("db_first")
+
+db.products.find()

@@ -1,0 +1,10 @@
+use("db_first")
+
+db.products.updateOne(
+    {_id: 2}, 
+    {
+        $set: {
+            name: "Blusas",
+            estilo: ['estilo_1', 'estilo_2', 'estilo_3']
+        }
+    })
