@@ -1,0 +1,22 @@
+use("db_first")
+
+// Remove One element from array
+/* db.inventory.updateMany(
+    {},
+    {
+        $pull:{
+            tags: "book"
+        }
+    })
+*/
+
+// Remove Others elements from array
+db.inventory.updateMany(
+    {},
+    {
+        $pull:{
+            tags: {
+                $in: ["appliance", "school"]
+            }
+        }
+    })

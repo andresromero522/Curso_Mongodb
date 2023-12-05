@@ -1,0 +1,8 @@
+use("db_first")
+
+// db.products_2.deleteOne({_id: 1})
+db.products_2.deleteMany({price: 100})
+
+/* Eliminar toda la coleccion:
+db.products_2.drop()
+*/

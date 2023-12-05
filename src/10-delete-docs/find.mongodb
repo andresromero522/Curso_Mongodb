@@ -1,0 +1,2 @@
+use("db_first")
+db.products_2.find()

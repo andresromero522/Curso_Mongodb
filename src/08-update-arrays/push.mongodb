@@ -1,0 +1,8 @@
+use("db_first")
+db.inventory.updateOne(
+    {_id: 4},
+    {
+        $push:{
+            tags: "headphone"
+        }
+    })
