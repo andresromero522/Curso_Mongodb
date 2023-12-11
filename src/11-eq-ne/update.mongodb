@@ -1,0 +1,11 @@
+use("db_first")
+
+db.inventory_new.updateMany(
+    // query - operators
+    { qty: {$ne : 20} },
+    // update - operators
+    {$inc: {
+        qty: 10
+    }
+}
+)

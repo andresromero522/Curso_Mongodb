@@ -1,0 +1,12 @@
+use("db_first")
+
+// using $eq
+// db.inventory_new.find({qty: 20})
+// db.inventory_new.find({qty: { $eq: 20 } })
+// db.inventory_new.find({"item.name": "ab"})
+// db.inventory_new.find({"item.code": "456"})
+// db.inventory_new.find({"item.code": {$eq : "456"}})
+
+// using $ne
+
+db.inventory_new.find({qty: {$ne : 20}})

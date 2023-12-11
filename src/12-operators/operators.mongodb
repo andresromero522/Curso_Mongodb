@@ -1,0 +1,9 @@
+use("db_first")
+
+// using $gt (>) & $gte (>=)
+// db.inventory_new_2.find({qty: {$gt : 20}})
+// db.inventory_new_2.find({qty : { $gte: 20 }})
+
+// using $lt (<) & $lte (<=)
+// db.inventory_new_2.find( {qty: {$lt : 20}} )
+db.inventory_new_2.find( {qty: {$lte : 20}} )
