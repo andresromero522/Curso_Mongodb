@@ -6,4 +6,11 @@ use("db_first")
 
 // using $lt (<) & $lte (<=)
 // db.inventory_new_2.find( {qty: {$lt : 20}} )
-db.inventory_new_2.find( {qty: {$lte : 20}} )
+// db.inventory_new_2.find( {qty: {$lte : 20}} )
+
+//Join
+// db.inventory_new_2.find({ qty: { $gte: 20, $lte: 25 } })
+db.inventory_new_2.find({
+    "item.code" : { $ne: "123" },
+    qty : { $gte: 20 , $lte: 25 }
+})

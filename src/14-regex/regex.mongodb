@@ -1,0 +1,15 @@
+use("db_first")
+
+// db.inventory_3.find( {"item.description" : "Single line description."})
+// Buscar los documentos que tengan la palabra line:
+// db.inventory_3.find( {"item.description" : { $regex : /line/ } })
+// Buscar los documentos que tengan la palabra line sea en mayusculas o minisculas:
+// db.inventory_3.find( {"item.description" : { $regex : /LINE/i } })
+// Buscar los documentos que tengan la palabra line al final del texto:
+// db.inventory_3.find( {"item.description" : { $regex : /LINE$/i } })
+// Buscar los documentos que tengan la palabra single al inicio del texto:
+// db.inventory_3.find( {"item.description" : { $regex : /^single/i } })
+// Buscar los documentos que inicien con s:
+// db.inventory_3.find( {"item.description" : { $regex : /^s/i } })
+// Buscar los documentos que inicien con s teniendo en cuenta los saltos de línea:
+db.inventory_3.find( {"item.description" : { $regex : /^s/im } })
