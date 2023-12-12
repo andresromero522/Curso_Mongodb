@@ -1,0 +1,8 @@
+use("sample_training")
+
+db.trips.find(
+    //query
+    { tripduration: { $lte: 300}},
+    //projection
+    { "start station name": 1, tripduration: 1}
+)
