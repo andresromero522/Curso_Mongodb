@@ -1,0 +1,30 @@
+use("db_first")
+
+// $in , values and arrays
+// db.inventory_new_3.find({ qty: {$in: [20, 25] }} )
+// db.inventory_new_3.find({ tags: {$in: ["book", "electronics"] }} )
+
+// $nin , values & arrays
+// db.inventory_new_3.find({ qty: {$nin: [20, 25] }} )
+// db.inventory_new_3.find({ tags: {$nin: ["book", "electronics"] }} )
+
+// arrays
+// db.inventory_new_3.find({ tags: "school" })
+// db.inventory_new_3.find({ tags: ["school", "book"] })
+// db.inventory_new_3.find({ tags: ["book", "school"] })
+
+// arrays $all
+// db.inventory_new_3.find({ tags: {$all: ["book", "school"]} })
+
+// $size arrays
+// db.inventory_new_3.find({ tags: {$size: 2} })
+
+// $elemMatch
+// db.survey.find({ results: {$elemMatch: { product: "xyz" }} })
+db.survey.find({ 
+    results: {
+        $elemMatch: { 
+            product: "xyz", 
+            score: { $gte: 7 } 
+        }} 
+    })

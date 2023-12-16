@@ -4,5 +4,5 @@ db.trips.find(
     //query
     { tripduration: { $lte: 300}},
     //projection
-    { "start station name": 1, tripduration: 1}
+    { "start station name": 1, tripduration: 1, _id: 0}
 )

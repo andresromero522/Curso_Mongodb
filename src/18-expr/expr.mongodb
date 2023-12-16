@@ -1,0 +1,8 @@
+use("db_first")
+
+// db.monthlyBudget.find( {spent: {$gte: 100} })
+db.monthlyBudget.find( {
+    $expr: {
+        $gte: ["$spent", "$budget"] 
+    }
+})
